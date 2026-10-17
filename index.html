@@ -1,86 +1,45 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card de venda</title>
-<link rel="shortcut icon" href="img/baby-yoda.png" type="image/x-icon">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="LOWKEY — cultura underground, streetwear e descobertas fora do óbvio.">
+  <title>LOWKEY — Never Loud. Always Present.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="btn-fundo">
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <div class="card shadow-lg overflow-hidden">
-                    <span class="badge
-                    badge-promo">PROMOÇÃO</span>
-                    <img src="img/30fd6b00e2699bd41214d8ff5f14aa8b.jpg" class="product-image w-100" alt="Baby Yoda - The Child">
-
-
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title fw-bold mb-0">Baby Yoda - Star Wars</h5>
-                                <div class="d-flex align-items-center">
-                                <div class="star-rating me-1">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </div>
-                                <span class="text-muted">4.9 (128)</span>
-                            </div>
-                        </div>
-                        
-                        <p class="card-text text-muted description">
-                            Inspirado na série 'The Mandalorian' da Disney. A adorável figura com pele verde, orelhas grandes e olhos grandes parece um bebê Yoda mas é chamada de "The Child". O brinquedo de pelúcia tem um corpo macio além de uma base resistente e mais pesada, perfeita para abraçar ou exibir como um colecionável.
-                        </p>
-                        
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div>
-                                <h4 class="price-tag fw-bold mb-0">R$ 250,90</h4>
-                                <small class="text-muted"><s>R$ 299,90</s> <span class="text-danger">-16% </span></small>
-                            </div>
-                            <span class="badge bg-success">Em estoque</span>
-                        </div>
-                        
-                        <div class="d-grid gap-2">
-                            <a href="#" class="btn btn-compra py-2">
-                                <i class="bi bi-cart3 me-2"></i>Comprar agora
-                            </a>
-
-                            <a href="#" class="btn  btn-outline-secondary btn --l py-2">
-                                <i class="bi bi-heart-fill me-2"></i>Adicionar à lista de desejos
-                            </a>
-
-                        </div>
-                        
-                        <div class="mt-3">
-                            <div class="d-flex justify-content-center text-center">
-                                <div class="mx-3">
-                                    <i class="bi bi-truck d-block fs-4 text-primary"></i>
-                                    <small>Entrega grátis</small>
-                                </div>
-                                <div class="mx-3">
-                                    <i class="bi bi-arrow-left-right d-block fs-4 text-primary"></i>
-                                    <small>Devolução grátis</small>
-                                </div>
-                                <div class="mx-3">
-                                    <i class="bi bi-shield-check d-block fs-4 text-primary"></i>
-                                    <small>Compra segura</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body>
+  <div class="announcement"><span class="spark">✦</span> NOT MADE TO FIT IN. — CULTURE OVER CLOUT <a href="#produtos">Explore a coleção <span>↗</span></a></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="LOWKEY início"><span class="brand-mark">LK<span>//</span></span><span>LOWKEY<small>NEVER LOUD. ALWAYS PRESENT.</small></span></a>
+    <form class="search" id="searchForm" role="search"><i data-lucide="search"></i><input id="searchInput" type="search" placeholder="Buscar peças, acessórios e cultura..." aria-label="Buscar produtos"><kbd>⌘ K</kbd><button type="submit" aria-label="Buscar"><i data-lucide="arrow-right"></i></button></form>
+    <div class="header-actions">
+      <button class="icon-btn theme-btn" id="themeToggle" aria-label="Alternar tema"><i data-lucide="moon"></i></button>
+      <button class="icon-btn" id="wishlistOpen" aria-label="Favoritos"><i data-lucide="heart"></i><span class="count" id="wishCount">0</span></button>
+      <button class="cart-trigger" id="cartOpen"><span class="cart-icon"><i data-lucide="shopping-bag"></i><b id="cartCount">0</b></span><span class="cart-label">Bag<strong id="cartTotal">R$ 0,00</strong></span></button>
     </div>
+  </header>
+  <nav class="category-nav" aria-label="Categorias"><div class="nav-inner" id="categoryNav"><button class="nav-category active" data-category="all">Tudo</button><button class="nav-category" data-category="men-clothing">Menswear</button><button class="nav-category" data-category="women-clothing">Womenswear</button><button class="nav-category" data-category="jewelery">Accessories</button><button class="nav-category" data-category="electronics">Tech</button><span class="nav-note"><i data-lucide="zap"></i> CULTURE / DROP 001</span></div></nav>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><span class="eyebrow"><span class="eyebrow-dot"></span> INDEPENDENT CULTURE / DROP 001</span><h1>NÃO SIGA.<br><em>DEFINA O RITMO.</em></h1><p>Streetwear, cultura digital e achados fora do algoritmo. Uma vitrine experimental para quem nunca coube no molde.</p><div class="hero-buttons"><a class="primary-btn" href="#produtos">EXPLORE O DROP <i data-lucide="arrow-up-right"></i></a><a class="text-btn" href="#manifesto">O MANIFESTO <span>→</span></a></div><div class="hero-proof"><div class="avatars"><span>J</span><span>M</span><span>A</span><span>+</span></div><div><strong>NOT MADE TO FIT IN</strong><small>CATÁLOGO DEMONSTRATIVO · API EXTERNA</small></div></div></div>
+      <div class="hero-art"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-glow"></div><div class="floating-card floating-top"><span class="mini-icon lavender"><i data-lucide="package-check"></i></span><span><b>DROP 001</b><small>SELEÇÃO EM MOVIMENTO</small></span><i data-lucide="arrow-up-right" class="float-arrow"></i></div><div class="hero-product"><div class="hero-product-top"><span class="product-tag">FEATURED OBJECT</span><span class="hero-star">✳</span></div><div class="hero-image-wrap"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=850&q=85" alt="Tênis esportivo vermelho"></div><div class="hero-product-info"><div><small>URBAN / ESSENTIALS</small><h3>WEAR YOUR OWN RULES.</h3></div><span class="hero-price">R$ 289<span>,90</span></span></div></div><div class="floating-card floating-bottom"><span class="mini-icon mint"><i data-lucide="heart-handshake"></i></span><span><b>YOUR OWN UNIFORM</b><small>KEEP WHAT SPEAKS</small></span></div><span class="decor-star star-a">✳</span><span class="decor-star star-b">✦</span></div>
+    </section>
+    <section class="trust-strip"><div><i data-lucide="shield-check"></i><span><b>TRANSPARÊNCIA</b><small>Dados de demonstração</small></span></div><div><i data-lucide="truck"></i><span><b>SEM FINGIMENTO</b><small>Checkout não é real</small></span></div><div><i data-lucide="refresh-ccw"></i><span><b>FEITO PARA TESTAR</b><small>Protótipo de portfólio</small></span></div><div><i data-lucide="heart"></i><span><b>CULTURA EM CAMADAS</b><small>Arte, moda e tecnologia</small></span></div></section>
+    <section class="products-section" id="produtos"><div class="section-heading"><div><span class="eyebrow">THE MARKETPLACE</span><h2>PEÇAS QUE <em>FALAM POR SI.</em></h2><p>Catálogo experimental conectado a uma API pública.</p></div><div class="heading-controls"><label class="sort-label" for="sortSelect">Ordenar por</label><select id="sortSelect"><option value="featured">Em destaque</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="rating">Melhor avaliados</option><option value="title">Nome A–Z</option></select><button class="filter-btn" id="filterToggle"><i data-lucide="sliders-horizontal"></i><span>Filtros</span></button></div></div>
+      <div class="active-filters" id="activeFilters"></div>
+      <div class="products-layout"><aside class="filter-panel" id="filterPanel"><div class="filter-title"><b>Filtros</b><button id="clearFilters">Limpar tudo</button></div><div class="filter-group"><h4>Categoria</h4><div id="sideCategories" class="filter-options"></div></div><div class="filter-group"><h4>Faixa de preço</h4><div class="price-range"><span>Até <b id="priceValue">R$ 1.500</b></span><input id="priceRange" type="range" min="50" max="1500" step="50" value="1500"></div></div><div class="filter-group"><h4>Avaliação</h4><label class="check-option"><input type="checkbox" id="ratingFilter"><span class="fake-check"></span> 4 estrelas ou mais</label></div><div class="filter-tip"><i data-lucide="sparkles"></i><b>FILTRE. ENCONTRE. REPITA.</b><p>Explore a seleção e encontre sua próxima referência.</p></div></aside>
+      <div class="catalog"><div class="catalog-meta"><span id="resultsCount">Carregando produtos...</span><span class="api-status" id="apiStatus"><span></span> Conectando à API</span></div><div class="product-grid" id="productGrid"><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div></div><div class="empty-state hidden" id="emptyState"><span><i data-lucide="search-x"></i></span><h3>NADA NESTE DROP</h3><p>Mude os filtros e tente outra vez.</p><button class="secondary-btn" id="emptyReset">Limpar filtros</button></div><button class="load-more hidden" id="loadMore">Carregar mais produtos <i data-lucide="arrow-down"></i></button></div></div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
-</body>
-</html>
+    <section class="lab-section" id="lowkey-lab"><div class="lab-kicker">LOWKEY LAB <span>EXPERIMENTAL SPACE / 001</span></div><div class="lab-content"><div><span class="eyebrow">MAKE SOMETHING UNEXPECTED</span><h2>IDEIAS FORA<br>DO <em>QUADRO.</em></h2><p>Um espaço criativo para explorar conceitos de pôsteres, campanhas e drops. A geração de imagens fica experimental e depende da disponibilidade do serviço externo.</p><a class="primary-btn" href="https://pollinations.ai/" target="_blank" rel="noreferrer">Abrir Pollinations.ai <i data-lucide="arrow-up-right"></i></a></div><div class="lab-art"><span class="lab-sticker">CREATE<br>YOUR<br>OWN<br>RULES</span><div class="lab-cross">LK<span>//</span></div><span class="lab-art-caption">NO TEMPLATE. NO PERMISSION.</span></div></div></section>
+    <section class="api-lab"><div><span class="eyebrow">API LAB / STATUS</span><h3>TRANSPARÊNCIA SOBRE A TECNOLOGIA.</h3><p>O catálogo utiliza uma API pública de demonstração. Preços são convertidos de forma ilustrativa para BRL; não são preços de venda da LOWKEY.</p></div><div class="api-lab-status"><span class="status-pulse"></span><div><b>FakeStoreAPI</b><small>Catálogo externo · sem inventário real</small></div></div></section>
+    <section class="manifesto" id="manifesto"><div class="manifesto-symbol"><i data-lucide="shapes"></i></div><div><span class="eyebrow">LOWKEY / MANIFESTO</span><h2>NÃO É SOBRE<br>SEGUIR. É SOBRE <em>EXISTIR.</em></h2></div><p>LOWKEY é um conceito de marketplace que mistura streetwear, estética DIY e cultura digital. Esta versão é um protótipo: o catálogo vem de uma API pública, e carrinho e favoritos são experiências locais, sem venda real.</p><a href="#produtos" class="manifesto-link">VOLTAR AO DROP <i data-lucide="arrow-up-right"></i></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">LK<span>//</span></span><span>LOWKEY<small>NEVER LOUD. ALWAYS PRESENT.</small></span></a><p>CULTURE OVER CLOUT.</p><span class="footer-tech">HTML · CSS · JS · REST API · LOWKEY LAB</span></footer>
+  <div class="overlay" id="overlay"></div><aside class="drawer" id="cartDrawer" aria-label="Carrinho de compras"><div class="drawer-head"><div><span class="eyebrow">YOUR SELECTION</span><h3>Bag <span id="drawerCount">(0)</span></h3></div><button class="icon-btn close-drawer" aria-label="Fechar carrinho"><i data-lucide="x"></i></button></div><div class="drawer-content" id="cartItems"></div><div class="drawer-footer" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="drawerTotal">R$ 0,00</strong></div><small>Frete e descontos calculados na próxima etapa.</small><button class="primary-btn checkout-btn" id="checkoutBtn">Continuar (demo) <i data-lucide="arrow-right"></i></button><p class="demo-note"><i data-lucide="info"></i> Demonstração apenas. Nenhuma compra ou cobrança será feita.</p></div></aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body></html>
